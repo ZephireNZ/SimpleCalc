@@ -1,19 +1,18 @@
 package me.zephirenz.simplecalc;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
 
-public class SimpleCalc implements Runnable, ActionListener {
+public class SimpleCalc extends JWindow {
 
-    public void run() {
-
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createGUI();
+            }
+        });
     }
 
-    public void main(String[] args) {
-
-    }
-
-    public void actionPerformed(ActionEvent event) {
+    private static void createGUI() {
 
     }
 
