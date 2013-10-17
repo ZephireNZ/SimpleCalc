@@ -1,0 +1,18 @@
+## Evaluator Tests ##
+        ArrayList<String> equations = new ArrayList<String>();
+        equations.add("2+1"); // Equals 3
+        //equations.add("5!"); // Equals 120 BREAKS
+        equations.add("2+3*5"); // Equals 17
+        equations.add("-2*5+3"); // Equals -7
+        //equations.add("5--3"); // Equals 5+3 = 8 BREAKS
+        //equations.add("5.5.2"); // Does not exist BREAKS
+
+        for(String eq : equations) {
+            try {
+                DoubleEvaluator engine = new DoubleEvaluator();
+                double d = engine.evaluate(eq);
+                System.out.println(d);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
